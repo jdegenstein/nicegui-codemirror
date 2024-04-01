@@ -18,11 +18,6 @@ class CodeMirror(ValueElement, DisableableElement, component="codemirror.js"):
         super().__init__(value=value, on_value_change=on_change)
         self._props["mode"] = mode
 
-        def change_handler(e):
-            self.value = e.args["value"]
-
-        self.on("change", change_handler)
-
     def update(self) -> None:
         super().update()
         self.run_method("update")
