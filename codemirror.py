@@ -1,5 +1,6 @@
 from typing import Callable, Optional
 
+from nicegui.events import GenericEventArguments
 from nicegui.element import Element
 from nicegui.elements.mixins.value_element import ValueElement
 from nicegui.elements.mixins.disableable_element import DisableableElement
@@ -21,3 +22,6 @@ class CodeMirror(ValueElement, DisableableElement, component="codemirror.js"):
     def update(self) -> None:
         super().update()
         self.run_method("update")
+
+    def _event_args_to_value(self, e: GenericEventArguments) -> str:
+        return e.args["value"]

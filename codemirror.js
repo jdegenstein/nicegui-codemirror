@@ -54,6 +54,7 @@ export default {
       this.editor.on("change", () => {
         const value = this.editor.getValue();
         this.$emit("change", { value });
+        this.$emit("update:value", { value });
       });
 
       this.editor.on("focus", () => {
