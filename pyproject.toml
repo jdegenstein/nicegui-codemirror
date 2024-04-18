@@ -25,5 +25,5 @@ build-backend = "setuptools.build_meta"
 name = "nicegui-code-mirror"
 version = "0.1.0"
 description = "A simple code editor based on CodeMirror element for nicegui"
-authors = [{name="Volltin", email="<volltin@live.com>"}]
+authors = [{name="Volltin", email="volltin@live.com"}]
 readme = "README.md"
